@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 /**
  * Semantic.
  */
-@JsonPropertyOrder({"type", "mimeType", "fileSemantic", "reference"})
+@JsonPropertyOrder({"type", "Semantic", "reference"})
 public class SemanticLink {
 
     @JsonProperty(value = "relation")
@@ -16,10 +16,7 @@ public class SemanticLink {
     protected String reference;
 
     @JsonProperty()
-    protected String mimeType;
-
-    @JsonProperty()
-    protected String fileSemantic;
+    protected String semantic;
 
     public SemanticLink() {
     }
@@ -40,19 +37,11 @@ public class SemanticLink {
         this.reference = reference;
     }
 
-    public String getMimeType() {
-        return mimeType;
+    public String getSemantic() {
+        return semantic;
     }
 
-    public void setMimeType(String mimeType) {
-        this.mimeType = mimeType;
-    }
-
-    public String getFileSemantic() {
-        return fileSemantic;
-    }
-
-    public void setFileSemantic(String fileSemantic) {
-        this.fileSemantic = fileSemantic;
+    public void setSemantic(String semantic) {
+        this.semantic = semantic;
     }
 }
